@@ -1,0 +1,24 @@
+index ( 0 [valor que aumenta a cada passo] ) começa a verificar vitorias a partir do numero 5(*)
+eles tem que ser da mesma cor
+ultimo contado vai ser o ganhador(jogador 1 ou 2) 
+
+(*)
+
+criar uma lista propria para jogador um e suas cordenadas   
+criar uma lista propria para jogador dois e suas cordenadas 
+ 
+fazer verificação de vitoria a partir dessas cordenadas 
+_________________________________________________________________urgente
+separar a fucao mudar cor 
+
+colocar uma funcao para ver se é do jogador um ou dois e jogar para sua respectiva funcao usando condição contador impar ou par
+
+funcao jogador1/2 vai adicionar a as coordenadas no seu respectivo objeto
+
+_________________________________________________________________sure
+Ys sendo iguais
+Xs sendo iguais 
+Ambos sendo iguais
+Xs tando em ordem crescente 
+Ys tando em ordem crescente
+ 

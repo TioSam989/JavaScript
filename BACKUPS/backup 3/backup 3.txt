@@ -1,0 +1,4 @@
+nesse backup eu separei funcoes finais para novas funcoes,
+ como a mudar cor para o jogador um e dois .
+so vai para essas funcao se contador for maior que cinco, valor minimo para
+ter vitoria.
