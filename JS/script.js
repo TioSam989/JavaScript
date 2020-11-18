@@ -296,10 +296,11 @@ function bugDiagonal(jogador, nomeJogador){
             // window.location.reload(true);
             console.log("") 
         }else{
-            alert("copy: "+copy)
+            // alert("copy: "+copy)
+            review(copy)
             console.log("Copy: "+copy)
-            console.log("jogador: "+jogador)
-            console.log("iDontKnow: "+iDontKnow)
+            // console.log("jogador: "+jogador)
+            // console.log("iDontKnow: "+iDontKnow)
             
 
             // console.clear();
@@ -320,3 +321,37 @@ function vitoria(nomeJogador){
 // COISAS PARA FAZER => a funcao diagonal so ve no sentido esquerda para direita e tem um bug no outro sentido
 // BUG => a funcao so ve se for direto para a direita, nao deixando nenhum rastro
 
+function review(copy = []){
+    let listinha1 = ['0_0', '1_1', '2_2'];
+    let listinha2 = ['2_0', '1_1', '0_2'];
+    var acertos1 =[];
+    var acertos2 = [];
+    console.clear();
+    console.log(listinha1);
+    console.log(listinha2);
+
+    for(var i=0; i<copy.length; i++) {
+        if(listinha1.indexOf(copy[i]) > -1) {
+            acertos1.push(copy[i]);
+        }
+    }
+    if(acertos1.length == 3){
+        console.clear();
+        console.log(acertos1)
+        alert("ganhou ");
+    }else{
+
+        for(var i=0; i<copy.length; i++) {
+            if(listinha2.indexOf(copy[i]) > -1) {
+                acertos2.push(copy[i]);
+            }
+        }
+        if(acertos2.length == 3){
+            console.clear()
+            console.log(acertos2);
+            alert("ganhou")
+        }   
+
+    }
+
+}
