@@ -338,7 +338,7 @@ function review(copy = []){
     if(acertos1.length == 3){
         console.clear();
         console.log(acertos1)
-        alert("ganhou ");
+        vitoria();
     }else{
 
         for(var i=0; i<copy.length; i++) {
@@ -349,7 +349,7 @@ function review(copy = []){
         if(acertos2.length == 3){
             console.clear()
             console.log(acertos2);
-            alert("ganhou")
+            vitoria();
         }   
 
     }
