@@ -4,9 +4,33 @@ html{
 }
 td{
     background-color: red;
-    width:270px;
-    height: 270px;
+    width:250px;
+    height: 250px;
     text-align: center;
     
+    
+}
+.jog{
+    
+}
+
+#jog1{
+    background-color: blue;
+}
+#jog2{
+    background-color: green;
+}
+#nomes{
+
+    border-width: 5px;
+    border-style: dashed;
+    border-color: #f00;
+    margin-top: 1%;
+    padding-bottom: 1%;
+}
+
+h1{
+    color: white;
+    font-style: oblique;
     
 }
