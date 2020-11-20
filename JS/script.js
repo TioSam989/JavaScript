@@ -117,7 +117,10 @@ function verificaEmPosicao(jogador, nomeJogador, posicao) {
 
     Object.values(quantasVezes).forEach(value => {
         if (value >= 3) {
-            vitoria(nomeJogador)
+            alert("value: "+value)
+            vitoria(nomeJogador, "metodo 1")
+        }else{
+            Velha("metodo 1")
         }
     });
 }
@@ -234,7 +237,7 @@ function bugDiagonal(jogador, nomeJogador){
     if(Array.isArray(iDontKnow)){
         if(iDontKnow == ""){ //ver se ela esta vazia (se fosse so um ! seria vazio, ent pus !! para contrariar o contrario)
             console.log("") 
-            vitoria(nomeJogador);
+            review(copy, nomeJogador)
         }else{
             console.log("Copy: "+copy)
             review(copy, nomeJogador)
@@ -261,32 +264,48 @@ function review(copy = [], nomeJogador){
     if(acertos1.length == 3){
         console.clear();
         console.log(acertos1)
-        vitoria(nomeJogador);
-    }else{
+        vitoria(nomeJogador, "metodo 2");
+    }else if(acertos1.length != 3){
 
         for(var i=0; i<copy.length; i++) {
             if(listinha2.indexOf(copy[i]) > -1) {
                 acertos2.push(copy[i]);
             }
         }
-        if(acertos2.length == 3){
+        if(acertos2.length == ){
             console.clear()
             console.log(acertos2);
-            vitoria(nomeJogador);
-        }   
+            vitoria(nomeJogador, "metodo 3");
+        }
 
     }
 
 }
 
-function vitoria(nomeJogador){
+function vitoria(nomeJogador, metodo){
+        console.log("entrie na funcao vitoria pelo"+metodo);
         alert(`Jogador ${nomeJogador} ganhou.`);
         document.location.reload(true);
 }
 
-// function submitForm(){
-//     console.log("entrei na funcao submitForm");
-//     alert("trava")
+function Velha(txt){
+    
+    if(((Object.values(player1).length >=4) && (Object.values(player2).length >=5)) || ((Object.values(player1).length >=5) && (Object.values(player2).length >=4)) ){
+        console.clear()
+        console.log("player1: "+Object.values(player1))
+        console.log("player2: "+Object.values(player2))
+        console.log("TXT:"+ txt)
+        player1 = {}
+        player2 = {}
 
-//     document.getElementById("nomes").hidden = "";
-// }
+        finish()
+        // alert("Deu velha!!!")
+        // document.location.reload(true);
+
+    }
+}
+function finish(){
+    alert("deu velha")
+    document.location.reload(true);
+
+}
