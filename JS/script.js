@@ -272,7 +272,7 @@ function review(copy = [], nomeJogador){
                 acertos2.push(copy[i]);
             }
         }
-        if(acertos2.length == ){
+        if(acertos2.length == 3){
             console.clear()
             console.log(acertos2);
             vitoria(nomeJogador, "metodo 3");
