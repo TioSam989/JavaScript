@@ -293,7 +293,7 @@ function review(copy = [], nomeJogador){
 function vitoria(nomeJogador, metodo){
         console.log("entrie na funcao vitoria pelo"+metodo);
         alert(`Jogador ${nomeJogador} ganhou.`);
-        // document.location.reload(false);
+        document.location.reload(true);
 }
 
 function Velha(txt){
@@ -307,13 +307,12 @@ function Velha(txt){
         player2 = {}
 
         finish()
-        // alert("Deu velha!!!")
         // document.location.reload(true);
 
     }
 }
 function finish(){
     alert("deu velha")
-    // document.location.reload(false);
+    document.location.reload(true);
 
 }
