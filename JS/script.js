@@ -22,6 +22,8 @@ var tabuleiro = {
     '2_2': '9',
 };
 
+var pecasTabuleiro = []
+
 var player1 = {};
 
 var player2 = {};
@@ -29,8 +31,10 @@ var player2 = {};
 function Distribuir(x, y) {
 
     var valor = tabuleiro[`${x}_${y}`];
+    pecasTabuleiro.push(valor);
 
     verificarVez(x, y, valor);
+    
 
 }
 
@@ -117,7 +121,7 @@ function verificaEmPosicao(jogador, nomeJogador, posicao) {
 
     Object.values(quantasVezes).forEach(value => {
         if (value >= 3) {
-            alert("value: "+value)
+            // alert("value: "+value)
             vitoria(nomeJogador, "metodo 1")
         }else{
             Velha("metodo 1")
@@ -261,10 +265,14 @@ function review(copy = [], nomeJogador){
             acertos1.push(copy[i]);
         }
     }
-    if(acertos1.length == 3){
+    if((acertos1.length == 3) && (pecasTabuleiro.length != 9)){
         console.clear();
         console.log(acertos1)
+
+
+        // if(){
         vitoria(nomeJogador, "metodo 2");
+        // }
     }else if(acertos1.length != 3){
 
         for(var i=0; i<copy.length; i++) {
@@ -285,7 +293,7 @@ function review(copy = [], nomeJogador){
 function vitoria(nomeJogador, metodo){
         console.log("entrie na funcao vitoria pelo"+metodo);
         alert(`Jogador ${nomeJogador} ganhou.`);
-        document.location.reload(true);
+        // document.location.reload(false);
 }
 
 function Velha(txt){
@@ -306,6 +314,6 @@ function Velha(txt){
 }
 function finish(){
     alert("deu velha")
-    document.location.reload(true);
+    // document.location.reload(false);
 
 }
